@@ -6,7 +6,7 @@ import { accountOverviewPage } from '../pages/AccountOverviewPage'
 import { billPaymentPage } from '../pages/BillPaymentPage'
 import { registrationPage } from '../pages/RegistrationPage'
 
-Given('I am at Parabank home page', () => {
+Given("I am at Parabank home page", () => {
   cy.visit('/')
 })
 
@@ -35,8 +35,15 @@ When('I fill in new unique username and password', () => {
 })
 
 When('I click on the {string} button', (btnValue) => {
-  cy.wait(1000)
+  cy.wait(3000)
   cy.clickButton(btnValue)
+})
+
+When('I click on the Open New Account button', ()=>{
+
+  cy.wait(3000)
+  cy.get('form > div > .button').click();
+
 })
 
 When('I re-login using the previously created user', () => {
@@ -49,7 +56,7 @@ When('I re-login using the previously created user', () => {
 
 When('I click on the {string} link', (linktext) => {
   if (
-    linktext === 'Open New Account' ||
+    linktext === 'OPEN NEW ACCOUNT' ||
     linktext === 'Accounts Overview' ||
     linktext === 'Transfer Funds'
   ) {
@@ -142,6 +149,9 @@ Then(
     })
     cy.get('@newAccountNumber').then((newAccountNumber) => {
       cy.get('@extractedAmount').then((extractedAmount) => {
+
+        cy.log("HELLO------------HELLO");
+        cy.log(newAccountNumber)
         accountOverviewPage.verifyAccountBalance(
           newAccountNumber,
           extractedAmount

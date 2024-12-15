@@ -1,4 +1,6 @@
 class LoginPage {
+
+
   elements = {
     usernameInput: () => cy.get('input[name="username"]'),
     passwordInput: () => cy.get('input[name="password"]'),
@@ -7,6 +9,12 @@ class LoginPage {
     welcomeText: () => cy.get('div#leftPanel .smallText'),
     sectionTitle: () => cy.get('h1.title'),
   }
+  //@find-By(css = "")
+  //WebElement name;
+
+  //void login()
+  //name.sendKey('')
+
 
   submitLogin(username, password) {
     this.elements.usernameInput().type(username)
@@ -17,6 +25,7 @@ class LoginPage {
   verifyWelcomeText() {
     this.elements.welcomeText().should('be.visible')
     cy.url().should('contains', '/overview.htm')
+    //cy.title()
   }
 }
 

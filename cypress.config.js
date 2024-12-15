@@ -25,10 +25,11 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
+    watchForFileChanges:false,
     setupNodeEvents,
     specPattern: 'cypress/e2e/**/*.feature',
     baseUrl: 'https://parabank.parasoft.com/',
     chromeWebSecurity: false,
-    env: {},
+    env: {} 
   },
 })

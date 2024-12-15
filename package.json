@@ -18,6 +18,12 @@
   ],
   "author": "Naim Sihabuddin",
   "license": "ISC",
+  "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/*.{js,ts}"
+  ],
+  
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",

@@ -33,7 +33,8 @@ Feature: Registration and Fund Management
     When I take note on the minimum deposit amount text message
     And I extracted the minimum amount to log
     And I create a new saving account
-    And I click on the "Open New Account" button
+    #And I click on the "Open New Account" button
+    And I click on the Open New Account button
     Then the section title should display "Account Opened!" text
     When I take note on the new account number created
     And I click on the "Accounts Overview" link
@@ -52,7 +53,8 @@ Feature: Registration and Fund Management
     When I take note on the minimum deposit amount text message
     And I extracted the minimum amount to log
     And I create a new saving account
-    And I click on the "Open New Account" button
+    #And I click on the "Open New Account" button
+    And I click on the Open New Account button
     Then the section title should display "Account Opened!" text
     When I take note on the new account number created
     And I click on the "Accounts Overview" link

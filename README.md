@@ -32,3 +32,36 @@ Install project dependencies with `npm install`
 ## 📂 Reporting
 
 - A HTML report is automatically generated after executing `./run_tests.sh`
+
+
+=============================
+
+Cypress Cucumber 
+----------------
+Command - 
+$ npm install @badeball/cypress-cucumber-preprocessor
+
+
+Update package.json with StepDefinition
+ "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/*.{js,ts}"
+  ],
+
+Feature
+-------
+- .feature 
+    Scenarios, Sceanrio outline, example, Feature, Given, when, then, and
+    Background, <parameterization>
+- Gherkin language
+
+
+StepDefinition
+--------------
+- .js
+- It will contain the implemented step which has been defined in the feature file
+
+
+
+
