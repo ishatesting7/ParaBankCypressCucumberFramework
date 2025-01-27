@@ -4,6 +4,7 @@ const preprocessor = require('@badeball/cypress-cucumber-preprocessor')
 const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild')
 
 async function setupNodeEvents(on, config) {
+  
   await preprocessor.addCucumberPreprocessorPlugin(on, config)
 
   on(
@@ -24,6 +25,7 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
+  projectId: 'h9vwxz',
   e2e: {
     watchForFileChanges:false,
     setupNodeEvents,

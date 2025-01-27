@@ -26,7 +26,6 @@ Feature: Registration and Fund Management
     Then the section title should display "Update Profile" text
     When I click on the "Request Loan" link
     Then the section title should display "Apply for a Loan" text
-    
   Scenario: Verify user is able to open a new Savings account and make funds transfer
     When I click on the "Open New Account" link
     Then the section title should display "Open New Account" text

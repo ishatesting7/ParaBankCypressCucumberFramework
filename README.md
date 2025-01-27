@@ -63,5 +63,10 @@ StepDefinition
 - It will contain the implemented step which has been defined in the feature file
 
 
+If we need to run via Cloud - 
+
+npx cypress run --record --key dd096e32-74ac-4bb9-b1f9-7b68166f6e04
+
+
 
 

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cypress-cloud":"npx cypress run --record --key dd096e32-74ac-4bb9-b1f9-7b68166f6e04",
     "cypress:runner": "cypress open --e2e --browser chrome",
     "precypress:execution": "rimraf reports && mkdir reports && echo {} > jsonlogs/log.json",
     "postcypress:execution": "node ./cypress/support/reporter/cucumber-html-report.js",
