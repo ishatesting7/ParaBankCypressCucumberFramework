@@ -69,4 +69,9 @@ npx cypress run --record --key dd096e32-74ac-4bb9-b1f9-7b68166f6e04
 
 
 
+Installation and Setup for Cucumber
+1. Install - $ npm install @badeball/cypress-cucumber-preprocessor
+2. Install - npm i -D cypress @bahmutov/cypress-esbuild-preprocessor esbuild
+3. Modify cypress.config.js - 
+
 

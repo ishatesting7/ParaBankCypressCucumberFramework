@@ -1,7 +1,7 @@
 Feature: Registration and Fund Management
 
   @regression
-  Scenario: Verify user is able to register a new account and manage fund transactions
+    Scenario: Verify user is able to register a new account and manage fund transactions
     Given I am at Parabank home page
     When I click on the "Register" link
     Then the registration form should be displayed

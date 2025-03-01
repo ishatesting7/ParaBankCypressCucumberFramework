@@ -10,6 +10,11 @@ Given("I am at Parabank home page", () => {
   cy.visit('/')
 })
 
+Given('I am on the home page on website', () => {
+  cy.visit('/')
+  cy.wait(5000);
+})
+
 /**
  *
  * Action methods
@@ -18,6 +23,22 @@ Given("I am at Parabank home page", () => {
 
 When('I fill in registration form', () => {
   registrationPage.setRegistrationDetails()
+})
+
+When('I navigated to about us page', () => {
+cy.get('[href="about.htm"]').eq(0).click();
+})
+
+
+Then('about us page should get displayed', () => {
+cy.get('h1[class="title"]').should('be.visible');
+})
+
+
+Then('enter the username {string} and password {string}', (username, password) => {
+  cy.get('input[name="username"]').type(username);
+  cy.get('input[name="password"]').type(password);
+  //cy.get('button[type="submit"]').click();
 })
 
 When('I generate new unique username and password', () => {
